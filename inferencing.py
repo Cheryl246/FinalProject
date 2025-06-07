@@ -25,8 +25,6 @@ if st.button("Show Recommedation") and selected_title:
         for _, row in result.iterrows():
             st.markdown(f"### 🎥 {row['title']} ({row['release_year']})")
             st.markdown(f"**Type**: {row['type']}  \n**Genre**: {', '.join(row['genres'])}")
-            st.markdown(f"**Cast**: {', '.join(row['cast']) if isinstance(row['cast'], list) else row['cast']}")
-            st.markdown(f"**Director**: {', '.join(row['director']) if isinstance(row['director'], list) else row['director']}")
             st.markdown(f"_{row['description']}_")
             st.markdown("---")
 
