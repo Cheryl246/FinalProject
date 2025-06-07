@@ -26,6 +26,6 @@ if st.button("Show Recommedation") and selected_title:
             st.markdown(f"### 🎥 {row['title']} ({row['release_year']})")
             st.markdown(f"**Type**: {row['type']}  \n**Genre**: {', '.join(row['genres'])}")
             st.markdown(f"_{row['description']}_")
-            st.markdown("---") tambahan untuk cast dan director 
+            st.markdown("---")  
 
 
