@@ -45,7 +45,7 @@ class NetflixRecommender:
         sim_scores = sim_scores[1:topn+1]
         rec_idxs = [i[0] for i in sim_scores]
         
-        return self.df[['title', 'type', 'release_year', 'description', 'genres']].iloc[rec_idxs]
+        return self.df[['title', 'type', 'release_year', 'description', 'genres','cast','director']].iloc[rec_idxs]
 
     def save_df_to_pickle(self, filename):
         with open(filename, 'wb') as file:
